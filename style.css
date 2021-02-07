@@ -216,7 +216,6 @@ body{
     opacity: 0.8;
 }
 
-
 /*  */
 .notFound{
     grid-template-columns: 1fr!important;
@@ -225,11 +224,6 @@ body{
     font-weight: 600;
     width: 100%;
 }
-
-
-
-
-
 
 /* Media Queries */
 @media screen and (min-width: 600px){

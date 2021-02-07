@@ -3,7 +3,7 @@ const mealList = document.getElementById('meal');
 const mealDetailsContent = document.querySelector('.meal-details-content');
 const recipeCloseBtn = document.getElementById('recipe-close-btn');
 
-// event listeners
+// Event Listener
 searchBtn.addEventListener('click', getMealList);
 mealList.addEventListener('click', getMealRecipe);
 recipeCloseBtn.addEventListener('click', () => {
@@ -11,7 +11,7 @@ recipeCloseBtn.addEventListener('click', () => {
 });
 
 
-// get meal list that matches with the ingredients
+// Get meal List That matches with The Ingredients
 function getMealList() {
   let searchInputTxt = document.getElementById('search-input').value.trim();
   fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${searchInputTxt}`)
@@ -43,7 +43,7 @@ function getMealList() {
 }
 
 
-// get recipe of the meal
+// Get Recipe of The Meal
 function getMealRecipe(e) {
   e.preventDefault();
   if (e.target.classList.contains('recipe-btn')) {
@@ -54,7 +54,7 @@ function getMealRecipe(e) {
   }
 }
 
-// create a modal
+// Create a Modal
 function mealRecipeModal(meal) {
   console.log(meal);
   meal = meal[0];
